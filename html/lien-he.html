@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+</head>
+<body>
+    <form name="myForm">
+        <p style="color:brown;font-size: 50px;">Liên hệ</p>
+        <label for="fname">Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject"><br>
+        <label for="message">Message:</label><br>
+        <input type="text" id="message" name="message"><br><br>
+        <input type="submit" value="Submit" onclick="validate()">
+      </form>
+    <script>
+        function validate(){
+            if(document.forms["myForm"]["fname"].value==""){
+                alert("You must be fill field name !");
+                return false;
+            }
+            if(document.forms["myForm"]["email"].value=="" || (/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/).test(document.forms["myForm"]["email"].value)==false){
+                alert("You must be fill field correct format email !");
+                return false;
+            }
+            if(document.forms["myForm"]["subject"].value==""){
+                alert("You must be fill field subject !");
+                return false;
+            }
+            if(document.forms["myForm"]["message"].value==""){
+                alert("You must be fill field message !");
+                return false;
+            }
+            alert("SUCCESS");
+        }
+    </script>
+</body>
+</html>
