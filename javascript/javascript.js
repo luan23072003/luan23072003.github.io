@@ -2,7 +2,7 @@ let slideIndex = 0;
         showSlides();
         
         function showSlides() {
-          let i;
+          let i = 0;
           let slides = document.getElementsByClassName("mySlides");
           let dots = document.getElementsByClassName("dot");
           for (i = 0; i < slides.length; i++) {
