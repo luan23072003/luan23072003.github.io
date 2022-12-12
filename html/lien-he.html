@@ -9,16 +9,41 @@
 <body>
     <form name="myForm">
         <p style="color:brown;font-size: 50px;">Liên hệ</p>
-        <label for="fname">Name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="subject">Subject:</label><br>
-        <input type="text" id="subject" name="subject"><br>
-        <label for="message">Message:</label><br>
-        <input type="text" id="message" name="message"><br><br>
-        <input type="submit" value="Submit" onclick="validate()">
-      </form>
+        <label for="fname" class="after">Name:</label><br>
+        <input type="text" placeholder = " Họ và tên" id="fname" name="fname" style="width:500px; height:30px;border-radius:5px;"><br>
+        <label for="email"class="after">Email:</label><br>
+        <input type="email" placeholder = " Nhập địa chỉ email" id="email" name="email" style="width:500px; height:30px;border-radius:5px;"><br>
+        <label for="subject" class="after">Subject:</label><br>
+        <input type="text" placeholder = " Nhập tiêu đề" id="subject" name="subject" style="width:500px; height:30px;border-radius:5px;"><br>
+        <label for="message" class="after">Message:</label><br>
+        <input type="text" placeholder = " Nội dung liên hệ" id="message" name="message" style="width:500px; height:30px;border-radius:5px;"><br><br>
+        <input  type="submit" value="Submit" id="button-1" onclick="validate()" >
+    </form>
+    <style>
+        .after::after{
+            content: "*";
+            color: red;
+            font-size: 20px;
+        }
+        form{
+            text-align: center;
+        }
+        body{
+            background: url(https://chancanvas.com/wp-content/uploads/2020/09/gradient-bg.jpg);
+        }
+        #button-1{
+            width: 200px;
+            height: 50px;
+            color:blue;
+            border-radius: 10px;
+        }
+        #button-1:hover{
+            color: white;
+            background-color: black;
+        }
+    </style>
+
+
     <script>
         function validate(){
             if(document.forms["myForm"]["fname"].value==""){
